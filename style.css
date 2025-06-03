@@ -31,10 +31,19 @@ h4 {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media (min-width: 960px) {
   .header {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  picture img {
+    width: 100%;
+    height: auto;
   }
 }

@@ -15,7 +15,36 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    
+    <!-- Responsive image section -->
+<picture>
+  <!-- Square image for viewport >= 960px -->
+  <source 
+    media="(min-width: 960px)" 
+    srcset="
+      images/square_480.jpg 480w,
+      images/square_640.jpg 640w,
+      images/square_800.jpg 800w
+    "
+    sizes="(min-width: 1600px) 800px,
+           (min-width: 1280px) 640px,
+           480px">
+
+  <!-- Landscape image for viewport < 960px -->
+  <img 
+    src="images/museum_960.jpg" 
+    srcset="
+      images/museum_320.jpg 320w,
+      images/museum-480.jpg 480w,
+      images/museum_720.jpg 720w,
+      images/museum_960.jpg 960w
+    "
+    sizes="(max-width: 320px) 320px,
+           (max-width: 480px) 480px,
+           (max-width: 720px) 720px,
+           960px"
+    alt="Museum gallery with paintings">
+</picture>
 
   </header>
 </body>
